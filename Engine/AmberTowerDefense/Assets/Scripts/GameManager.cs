@@ -5,6 +5,12 @@ using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
+    /*
+     * This scripts manages the flow of the game, 
+     * for example sending a signal to start the enemy spawning 
+     * or recieving the signal to end the game and show if the player won or lost.
+     */
+
     public static GameManager instance;
 
     public EnemyManager enemyManager;

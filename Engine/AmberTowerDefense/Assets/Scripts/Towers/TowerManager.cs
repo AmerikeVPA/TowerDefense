@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class TowerManager : MonoBehaviour
 {
+    /*
+     * This manager keeps track of the amount of active towers in scene.
+     * When a Tower gets destroyed by the enemies it will tell this manager to reduce the active tower count.
+     * If the count reaches 0 it will tell the GameManager that the game was lost and end the game.
+     */
     public static TowerManager instance;
 
     private int activeTowersCount;

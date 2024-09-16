@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+
     private float _lifetime, _speed;
     [HideInInspector]
     public float _bulletDamage;
@@ -12,6 +13,9 @@ public class Bullet : MonoBehaviour
     private CircleCollider2D _circleCollider;
     private Rigidbody2D _rb2D;
 
+    /*
+     * The next section gets the data sent by the Gun script and molds the object according those variables.
+     */
     #region ObjectSetup
     public void SetBullet(BulletData bulletData, float damage)
     {
@@ -24,6 +28,11 @@ public class Bullet : MonoBehaviour
         _rb2D = GetComponent<Rigidbody2D>();
     }
     #endregion
+
+    /*
+     * The next section contains all the processes made by the bullet in order to interact with the rest of the objects in the scene.
+     */
+    #region BulletActions
     public void ShootBullet(Vector3 start, Vector3 end)
     {
         _startPosition = start;
@@ -49,4 +58,5 @@ public class Bullet : MonoBehaviour
             //TurnBulletOff();
         }
     }
+    #endregion
 }

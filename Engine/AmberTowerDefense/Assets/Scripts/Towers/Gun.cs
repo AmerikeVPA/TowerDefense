@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
+    /*
+     * This class is responsible of attacking a defined target by its parent object.
+     * It receives the information and sets the variables so they can interact with the scene accordingly.
+     */
+
     private bool _targetInRange = false, _canShoot = true;
     private int _maxBullets;
     private float _damage, _fireRate;

@@ -7,8 +7,14 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Tower : MonoBehaviour
 {
+    /*
+     * This script recieves a TowerData and molds the object accordingly to the information.
+     * The only input given by the user is the data and it must be placed as a child of the 
+     * TowerManager for it to be counted for the game flow.
+     */
+
     public TowerData towerData;
-    // Variables set with TowerData for local process
+
     private float _unitPlacementRad;
     private SpriteRenderer _spriteRenderer;
     private Gun _sentry;

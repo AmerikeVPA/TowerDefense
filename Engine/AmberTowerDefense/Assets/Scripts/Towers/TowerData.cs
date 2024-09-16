@@ -5,10 +5,16 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Object Data/Tower Data")]
 public class TowerData : ScriptableObject
 {
+    /*
+     * These scripts keep the information for the different kinds of enemies, towers or bullets.
+     * They are designed in a way where any team member can modify the attributes directly from the engine without having to open any code editor.
+     * Additionally it contains labels that will explain the different variables through the editor in case the information is needed by the user.
+     */
+
     [Header("Tower attributes")]
     
     [Space(5), Header("Visuals and differentiation")]
-    [Tooltip("The name for this type of tower, it will be used to name the correspondig GameObjects according to this string.")]
+    [Tooltip("The name for this type of tower, it will be used to name the corresponding GameObjects according to this string.")]
     public string towerType;
     [Tooltip("The sprite that is going to be used for this type of tower.")]
     public Sprite towerSprite;

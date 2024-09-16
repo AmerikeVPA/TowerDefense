@@ -9,6 +9,10 @@ using static UnityEngine.EventSystems.EventTrigger;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Enemy : MonoBehaviour
 {
+    /*
+     * This script doesn't need any input from the inspector as it recieves the data from the EnemyManager.
+     * It creates the necessary components accordingly to the informations of the respective enemy type given by the manager.
+     */
     private float _speed;
     private Tower _targetTower;
     private CircleCollider2D _persuitTargetRange;
@@ -23,6 +27,11 @@ public class Enemy : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _persuitTargetRange = GetComponent<CircleCollider2D>();
     }
+
+    /*
+     * This section uses the data from the scriptable objecto to create any necessary componets
+     * for the optimal functioning of the object.
+     */
     #region ObjectSetup
     public void SetEnemy(EnemyData dataToUse)
     {
@@ -51,6 +60,11 @@ public class Enemy : MonoBehaviour
         _weapon = enemyGun.AddComponent<Gun>();
     }
     #endregion
+
+    /*
+     * This section is responsible of moving the enemy to the target and other scene interactions.
+     */
+    #region EnemyActions
     private void Update()
     {
         MoveEnemy();
@@ -83,4 +97,5 @@ public class Enemy : MonoBehaviour
         transform.parent.parent.GetComponent<EnemyManager>().EnemyDestroyed();
         Destroy(gameObject);
     }
+    #endregion
 }
