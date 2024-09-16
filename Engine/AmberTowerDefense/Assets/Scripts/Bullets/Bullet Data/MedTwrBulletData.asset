@@ -9,11 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2380dae21afa49742aa4724bbeb4302e, type: 3}
-  m_Name: SmallTower
+  m_Script: {fileID: 11500000, guid: 4b7b907bdd313f64fa3f4fd1ca2b0766, type: 3}
+  m_Name: MedTwrBulletData
   m_EditorClassIdentifier: 
-  towerType: 
-  towerHealth: 4
-  towerDamage: 0
-  towerFireRate: 0
-  towerSprite: {fileID: 7482667652216324306, guid: 88f1259bb51369c488e42ec8822cd5e7, type: 3}
+  bulletType: Medium Tower Bullet
+  bulletSprite: {fileID: -2413806693520163455, guid: ce670b4c300a5794ebbd31b9046be093, type: 3}
+  bulletLifetime: 2.75
+  bulletSpeed: 4.5

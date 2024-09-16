@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77e6b06a71550d645b9bf5617ce9abdf, type: 3}
+  m_Name: BigEnemy
+  m_EditorClassIdentifier: 
+  enemyType: Big Enemy
+  enemySprite: {fileID: 7482667652216324306, guid: e0c87bf82bd780a4ab1affdedbbf02f3, type: 3}
+  enemyBullet: {fileID: 11400000, guid: 355222ca35a250144b8a6d2bc3ecb533, type: 2}
+  enemyHealth: 50
+  enemySpeed: 1
+  enemyDetectionRange: 2.5
+  enemyDamage: 12.75
+  bulletCapacity: 4
+  enemyFireRate: 3
